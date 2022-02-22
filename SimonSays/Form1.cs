@@ -14,7 +14,10 @@ namespace SimonSays
 {
     public partial class Form1 : Form
     {
-        //TODO: create a List to store the pattern. Must be accessable on other screens
+        //List to store the pattern. Must be accessable on other screens
+        public static List<int> pattern = new List<int>();
+        //highscore pattern
+        public static List<int> highScores = new List<int>();
 
         public Form1()
         {
@@ -23,7 +26,12 @@ namespace SimonSays
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //TODO: Launch MenuScreen
+            //launch screen
+            MenuScreen ms = new MenuScreen();
+            this.Controls.Add(ms);
+
+            //centre screen on the form
+            ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
         }
     }
 }

@@ -72,18 +72,18 @@ namespace SimonSays.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream green {
+        internal static System.IO.UnmanagedMemoryStream gameover {
             get {
-                return ResourceManager.GetStream("green", resourceCulture);
+                return ResourceManager.GetStream("gameover", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream mistake {
+        internal static System.IO.UnmanagedMemoryStream green {
             get {
-                return ResourceManager.GetStream("mistake", resourceCulture);
+                return ResourceManager.GetStream("green", resourceCulture);
             }
         }
         

@@ -28,71 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.yellowButton = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
+            this.indigoButton = new System.Windows.Forms.Button();
             this.blueButton = new System.Windows.Forms.Button();
-            this.redButton = new System.Windows.Forms.Button();
-            this.greenButton = new System.Windows.Forms.Button();
+            this.lightoranButton = new System.Windows.Forms.Button();
+            this.darktourButton = new System.Windows.Forms.Button();
+            this.patternlengthLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // yellowButton
+            // indigoButton
             // 
-            this.yellowButton.BackColor = System.Drawing.Color.Goldenrod;
-            this.yellowButton.Location = new System.Drawing.Point(40, 149);
-            this.yellowButton.Name = "yellowButton";
-            this.yellowButton.Size = new System.Drawing.Size(110, 110);
-            this.yellowButton.TabIndex = 3;
-            this.yellowButton.UseVisualStyleBackColor = false;
+            this.indigoButton.BackColor = System.Drawing.Color.Indigo;
+            this.indigoButton.Location = new System.Drawing.Point(60, 229);
+            this.indigoButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.indigoButton.Name = "indigoButton";
+            this.indigoButton.Size = new System.Drawing.Size(165, 169);
+            this.indigoButton.TabIndex = 3;
+            this.indigoButton.UseVisualStyleBackColor = false;
+            this.indigoButton.Click += new System.EventHandler(this.indigoButton_Click);
             // 
             // blueButton
             // 
-            this.blueButton.BackColor = System.Drawing.Color.DarkBlue;
-            this.blueButton.Location = new System.Drawing.Point(152, 149);
+            this.blueButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.blueButton.Location = new System.Drawing.Point(228, 229);
+            this.blueButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.blueButton.Name = "blueButton";
-            this.blueButton.Size = new System.Drawing.Size(110, 110);
+            this.blueButton.Size = new System.Drawing.Size(165, 169);
             this.blueButton.TabIndex = 2;
             this.blueButton.UseVisualStyleBackColor = false;
+            this.blueButton.Click += new System.EventHandler(this.blueButton_Click);
             // 
-            // redButton
+            // lightoranButton
             // 
-            this.redButton.BackColor = System.Drawing.Color.DarkRed;
-            this.redButton.Location = new System.Drawing.Point(152, 37);
-            this.redButton.Name = "redButton";
-            this.redButton.Size = new System.Drawing.Size(110, 110);
-            this.redButton.TabIndex = 1;
-            this.redButton.UseVisualStyleBackColor = false;
+            this.lightoranButton.BackColor = System.Drawing.Color.SandyBrown;
+            this.lightoranButton.Location = new System.Drawing.Point(228, 57);
+            this.lightoranButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lightoranButton.Name = "lightoranButton";
+            this.lightoranButton.Size = new System.Drawing.Size(165, 169);
+            this.lightoranButton.TabIndex = 1;
+            this.lightoranButton.UseVisualStyleBackColor = false;
+            this.lightoranButton.Click += new System.EventHandler(this.lightoranButton_Click);
             // 
-            // greenButton
+            // darktourButton
             // 
-            this.greenButton.BackColor = System.Drawing.Color.ForestGreen;
-            this.greenButton.Location = new System.Drawing.Point(40, 37);
-            this.greenButton.Name = "greenButton";
-            this.greenButton.Size = new System.Drawing.Size(110, 110);
-            this.greenButton.TabIndex = 0;
-            this.greenButton.UseVisualStyleBackColor = false;
-            this.greenButton.Click += new System.EventHandler(this.greenButton_Click);
+            this.darktourButton.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.darktourButton.Location = new System.Drawing.Point(60, 57);
+            this.darktourButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.darktourButton.Name = "darktourButton";
+            this.darktourButton.Size = new System.Drawing.Size(165, 169);
+            this.darktourButton.TabIndex = 0;
+            this.darktourButton.UseVisualStyleBackColor = false;
+            this.darktourButton.Click += new System.EventHandler(this.darktourButton_Click_1);
+            // 
+            // patternlengthLabel
+            // 
+            this.patternlengthLabel.AutoSize = true;
+            this.patternlengthLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.patternlengthLabel.Location = new System.Drawing.Point(213, 220);
+            this.patternlengthLabel.Name = "patternlengthLabel";
+            this.patternlengthLabel.Size = new System.Drawing.Size(0, 20);
+            this.patternlengthLabel.TabIndex = 4;
             // 
             // GameScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.yellowButton);
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.Controls.Add(this.patternlengthLabel);
+            this.Controls.Add(this.indigoButton);
             this.Controls.Add(this.blueButton);
-            this.Controls.Add(this.redButton);
-            this.Controls.Add(this.greenButton);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Controls.Add(this.lightoranButton);
+            this.Controls.Add(this.darktourButton);
             this.Name = "GameScreen";
-            this.Size = new System.Drawing.Size(301, 300);
+            this.Size = new System.Drawing.Size(452, 462);
             this.Load += new System.EventHandler(this.GameScreen_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button yellowButton;
+        private System.Windows.Forms.Button indigoButton;
         private System.Windows.Forms.Button blueButton;
-        private System.Windows.Forms.Button redButton;
-        private System.Windows.Forms.Button greenButton;
+        private System.Windows.Forms.Button lightoranButton;
+        private System.Windows.Forms.Button darktourButton;
+        private System.Windows.Forms.Label patternlengthLabel;
     }
 }
