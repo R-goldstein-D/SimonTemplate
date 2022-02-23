@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
             this.indigoButton = new System.Windows.Forms.Button();
             this.blueButton = new System.Windows.Forms.Button();
             this.lightoranButton = new System.Windows.Forms.Button();
             this.darktourButton = new System.Windows.Forms.Button();
             this.patternlengthLabel = new System.Windows.Forms.Label();
+            this.Timer = new System.Windows.Forms.Timer(this.components);
+            this.timerLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // indigoButton
@@ -89,12 +92,29 @@
             this.patternlengthLabel.Size = new System.Drawing.Size(0, 20);
             this.patternlengthLabel.TabIndex = 4;
             // 
+            // Timer
+            // 
+            this.Timer.Enabled = true;
+            this.Timer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timerLabel
+            // 
+            this.timerLabel.AutoSize = true;
+            this.timerLabel.Font = new System.Drawing.Font("Yu Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timerLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.timerLabel.Location = new System.Drawing.Point(23, 26);
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.Size = new System.Drawing.Size(59, 26);
+            this.timerLabel.TabIndex = 5;
+            this.timerLabel.Text = "timer";
+            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.patternlengthLabel);
             this.Controls.Add(this.indigoButton);
             this.Controls.Add(this.blueButton);
@@ -115,5 +135,7 @@
         private System.Windows.Forms.Button lightoranButton;
         private System.Windows.Forms.Button darktourButton;
         private System.Windows.Forms.Label patternlengthLabel;
+        private System.Windows.Forms.Timer Timer;
+        private System.Windows.Forms.Label timerLabel;
     }
 }

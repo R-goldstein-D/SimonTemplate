@@ -20,6 +20,7 @@ namespace SimonSays
         Random rand = new Random();
         Matrix transformMatrix = new Matrix();
         int guessIndex;
+        int counter = 100;
         int pause = 500; 
 
         //buttons
@@ -41,6 +42,9 @@ namespace SimonSays
 
         private void GameScreen_Load(object sender, EventArgs e)
         {
+            // Enable the timer 
+            Timer.Enabled = true;
+
             //shape them buttons baby
             ShapeButtons();
 
@@ -120,7 +124,7 @@ namespace SimonSays
             gameSounds[4].Play();
 
             //close this screen, open GameOverScreen
-            Form f = this.FindForm();
+            Form f = FindForm();
             f.Controls.Remove(this);
 
             GameOverScreen gs = new GameOverScreen();
@@ -131,7 +135,6 @@ namespace SimonSays
         }
 
         //event methods for each button
-
         private void darktourButton_Click_1(object sender, EventArgs e)
         {
             if (Form1.pattern[guessIndex] == 0)
@@ -193,6 +196,9 @@ namespace SimonSays
             //add one to guess index
             guessIndex++;
 
+            //this allowes the timer to refesh with every button click
+            counter = 100;
+
             //check for end of pattern
             if (guessIndex == Form1.pattern.Count)
             {
@@ -201,6 +207,22 @@ namespace SimonSays
 
                 ComputerTurn();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //counter goes down
+            counter--;
+            
+            //once counter hits zero and no button is pressed, game over
+            if (counter <= 0)
+            {
+                Timer.Enabled = false;
+                GameOver();
+            }
+
+            //add countdown to label
+            timerLabel.Text = $"{counter}";
         }
     }
 }
