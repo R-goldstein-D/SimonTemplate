@@ -96,7 +96,7 @@ namespace SimonSays
         private void ComputerTurn()
         {
             //get rand num between 0 and 4 (0, 1, 2, 3) and add to pattern list
-            Form1.pattern.Add(rand.Next(0, 4));
+            Form1.pattern.Add(rand.Next(0, 4)); 
 
             //create a for loop that shows each value in the pattern by lighting up approriate button for (int i = 0; i < Form1.pattern.Count; i++)
             for (int i = 0; i < Form1.pattern.Count; i++)
