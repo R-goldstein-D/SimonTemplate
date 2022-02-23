@@ -28,8 +28,11 @@ namespace SimonSays
         Button[] buttons = new Button[4];
 
         //sounds
-        SoundPlayer gameover = new SoundPlayer(Properties.Resources.gameover);
-        SoundPlayer blue = new SoundPlayer(Properties.Resources.blue);
+        List<SoundPlayer> gameSounds = new List<SoundPlayer>(new SoundPlayer[] {
+            new SoundPlayer(Properties.Resources.red), new SoundPlayer(Properties.Resources.green),
+            new SoundPlayer(Properties.Resources.yellow), new SoundPlayer(Properties.Resources.blue),
+            new SoundPlayer(Properties.Resources.gameover), });
+
 
         public GameScreen()
         {
@@ -99,6 +102,7 @@ namespace SimonSays
             for (int i = 0; i < Form1.pattern.Count; i++)
             {
                 buttons[Form1.pattern[i]].BackColor = lightColours[Form1.pattern[i]];
+                gameSounds[Form1.pattern[i]].Play();
                 buttons[Form1.pattern[i]].Refresh();
                 Thread.Sleep(pause);
                 buttons[Form1.pattern[i]].BackColor = baseColours[Form1.pattern[i]];
@@ -112,8 +116,8 @@ namespace SimonSays
 
         public void GameOver()
         {
-            //Play a game over sound
-            gameover.Play();
+            //play game over sound
+            gameSounds[4].Play();
 
             //close this screen, open GameOverScreen
             Form f = this.FindForm();
@@ -126,7 +130,7 @@ namespace SimonSays
             gs.Location = new Point((f.Width - gs.Width) / 2, (f.Height - gs.Height) / 2);
         }
 
-        //TODO: create one of these event methods for each button
+        //event methods for each button
 
         private void darktourButton_Click_1(object sender, EventArgs e)
         {
@@ -178,8 +182,8 @@ namespace SimonSays
         {
             //for button pressed, light up button, play sound, and pause
             //set button colour back to original
-            blue.Play();
             buttons[Form1.pattern[guessIndex]].BackColor = lightColours[Form1.pattern[guessIndex]];
+            gameSounds[Form1.pattern[guessIndex]].Play();
             buttons[Form1.pattern[guessIndex]].Refresh();
             Thread.Sleep(pause);
             buttons[Form1.pattern[guessIndex]].BackColor = baseColours[Form1.pattern[guessIndex]];
