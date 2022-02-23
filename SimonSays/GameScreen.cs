@@ -20,7 +20,7 @@ namespace SimonSays
         Random rand = new Random();
         Matrix transformMatrix = new Matrix();
         int guessIndex;
-        int pause = 500;
+        int pause = 500; 
 
         //buttons
         List<Color> baseColours = new List<Color>(new Color[] {Color.DarkSlateGray, Color.SandyBrown, Color.Indigo, Color.SteelBlue});
