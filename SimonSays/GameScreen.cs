@@ -61,12 +61,12 @@ namespace SimonSays
             patternlengthLabel.Text = "0";
             patternlengthLabel.Refresh();
 
-            //clear pattern list, refresh, pause, run ComputerTurn()
+            //clear pattern list, refresh, pause
             Form1.pattern.Clear();
             Refresh();
             Thread.Sleep(1000);
 
-            //begin game with computer turn
+            //begin game with computerturn()
             ComputerTurn();
         }
         public void ShapeButtons()
@@ -133,11 +133,11 @@ namespace SimonSays
             Form f = FindForm();
             f.Controls.Remove(this);
 
-            GameOverScreen gs = new GameOverScreen();
-            f.Controls.Add(gs);
+            GameOverScreen go = new GameOverScreen();
+            f.Controls.Add(go);
 
             //centre screen on the form
-            gs.Location = new Point((f.Width - gs.Width) / 2, (f.Height - gs.Height) / 2);
+            go.Location = new Point((f.Width - go.Width) / 2, (f.Height - go.Height) / 2);
         }
 
         //event methods for each button

@@ -16,7 +16,7 @@ namespace SimonSays
     {
         //List to store the pattern. Must be accessable on other screens
         public static List<int> pattern = new List<int>();
-        //highscore pattern
+        //highscore list
         public static List<int> highScores = new List<int>();
 
         public Form1()
