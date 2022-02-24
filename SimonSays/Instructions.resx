@@ -121,6 +121,7 @@
     <value>SIMON creates a series of tones and lights and requires a user to repeat the sequence. 
 The series becomes progressively longer as the user goes on
 Once the user fails, or the timer hits zero the game is over.
+The timer resets with each correct click.
 GOOD LUCK!</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />

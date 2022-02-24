@@ -30,9 +30,9 @@ namespace SimonSays
 
         //sounds
         List<SoundPlayer> gameSounds = new List<SoundPlayer>(new SoundPlayer[] {
-            new SoundPlayer(Properties.Resources.red), new SoundPlayer(Properties.Resources.green),
+            new SoundPlayer(Properties.Resources.darkgreen), new SoundPlayer(Properties.Resources.purple),
             new SoundPlayer(Properties.Resources.yellow), new SoundPlayer(Properties.Resources.blue),
-            new SoundPlayer(Properties.Resources.gameover), });
+            new SoundPlayer(Properties.Resources.gameover),});
 
 
         public GameScreen()
@@ -120,6 +120,9 @@ namespace SimonSays
 
         public void GameOver()
         {
+            //disable timer
+            Timer.Enabled = false;
+
             //play game over sound
             gameSounds[4].Play();
 
@@ -217,7 +220,6 @@ namespace SimonSays
             //once counter hits zero and no button is pressed, game over
             if (counter <= 0)
             {
-                Timer.Enabled = false;
                 GameOver();
             }
 

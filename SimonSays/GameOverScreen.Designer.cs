@@ -93,7 +93,7 @@
             this.highscoreLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.highscoreLabel.Location = new System.Drawing.Point(51, 194);
             this.highscoreLabel.Name = "highscoreLabel";
-            this.highscoreLabel.Size = new System.Drawing.Size(358, 117);
+            this.highscoreLabel.Size = new System.Drawing.Size(358, 149);
             this.highscoreLabel.TabIndex = 4;
             this.highscoreLabel.Text = "HighScore\r\n0\r\n0\r\n0";
             this.highscoreLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
