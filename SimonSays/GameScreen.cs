@@ -16,11 +16,11 @@ namespace SimonSays
 {
     public partial class GameScreen : UserControl
     {
-        //create guess variable to track what part of the pattern the user is at
+        //create random
         Random rand = new Random();
         //transform squares to 1/4 in shapebutton function
         Matrix transformMatrix = new Matrix();
-        //initial guess index
+        //create guess variable to track what part of the pattern the user is at
         int guessIndex;
         //timer counter
         int counter = 100;
@@ -69,6 +69,8 @@ namespace SimonSays
             //begin game with computerturn()
             ComputerTurn();
         }
+
+        //shaping button to 1/4 pie shape
         public void ShapeButtons()
         {
             //add ouside and inside circle to shape edges
@@ -190,11 +192,11 @@ namespace SimonSays
         public void ButtonClick()
         {
             //for button pressed, light up button, play sound, and pause
-            //set button colour back to original
             buttons[Form1.pattern[guessIndex]].BackColor = lightColours[Form1.pattern[guessIndex]];
             gameSounds[Form1.pattern[guessIndex]].Play();
             buttons[Form1.pattern[guessIndex]].Refresh();
             Thread.Sleep(pause);
+            //set button colour back to original
             buttons[Form1.pattern[guessIndex]].BackColor = baseColours[Form1.pattern[guessIndex]];
             buttons[Form1.pattern[guessIndex]].Refresh();
             Thread.Sleep(pause);
