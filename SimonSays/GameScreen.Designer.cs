@@ -104,9 +104,9 @@
             this.timerLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.timerLabel.Location = new System.Drawing.Point(23, 26);
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(59, 26);
+            this.timerLabel.Size = new System.Drawing.Size(81, 26);
             this.timerLabel.TabIndex = 5;
-            this.timerLabel.Text = "timer";
+            this.timerLabel.Text = "[Timer]";
             // 
             // GameScreen
             // 
