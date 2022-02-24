@@ -18,8 +18,11 @@ namespace SimonSays
     {
         //create guess variable to track what part of the pattern the user is at
         Random rand = new Random();
+        //transform squares to 1/4 in shapebutton function
         Matrix transformMatrix = new Matrix();
+        //initial guess index
         int guessIndex;
+        //timer counter
         int counter = 100;
         int pause = 500; 
 
