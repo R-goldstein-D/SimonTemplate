@@ -117,7 +117,7 @@
             this.scoreLength.BackColor = System.Drawing.Color.Transparent;
             this.scoreLength.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scoreLength.ForeColor = System.Drawing.SystemColors.Control;
-            this.scoreLength.Location = new System.Drawing.Point(335, 156);
+            this.scoreLength.Location = new System.Drawing.Point(335, 155);
             this.scoreLength.Name = "scoreLength";
             this.scoreLength.Size = new System.Drawing.Size(45, 28);
             this.scoreLength.TabIndex = 6;
