@@ -24,11 +24,11 @@ namespace SimonSays
         int guessIndex;
         //timer counter
         int counter = 100;
-        int pause = 500; 
+        int pause = 500;
 
         //buttons
-        List<Color> baseColours = new List<Color>(new Color[] {Color.DarkSlateGray, Color.SandyBrown, Color.Indigo, Color.SteelBlue});
-        List<Color> lightColours = new List<Color>(new Color[] {Color.Teal, Color.BurlyWood, Color.BlueViolet, Color.LightSteelBlue});
+        List<Color> baseColours = new List<Color>(new Color[] { Color.DarkSlateGray, Color.SandyBrown, Color.Indigo, Color.SteelBlue });
+        List<Color> lightColours = new List<Color>(new Color[] { Color.Teal, Color.BurlyWood, Color.BlueViolet, Color.LightSteelBlue });
         Button[] buttons = new Button[4];
 
         //sounds
@@ -89,15 +89,15 @@ namespace SimonSays
             //apply to buttons and rotate as necessary 
             darktourButton.Region = buttonRegion;
 
-            transformMatrix.RotateAt(90, new PointF(55, 55)); 
+            transformMatrix.RotateAt(90, new PointF(55, 55));
             buttonRegion.Transform(transformMatrix);
             lightoranButton.Region = buttonRegion;
 
-            transformMatrix.RotateAt(90, new PointF(55, 55)); 
+            transformMatrix.RotateAt(90, new PointF(55, 55));
             buttonRegion.Transform(transformMatrix);
             indigoButton.Region = buttonRegion;
 
-            transformMatrix.RotateAt(90, new PointF(55, 55)); 
+            transformMatrix.RotateAt(90, new PointF(55, 55));
             buttonRegion.Transform(transformMatrix);
             blueButton.Region = buttonRegion;
         }
@@ -105,7 +105,7 @@ namespace SimonSays
         private void ComputerTurn()
         {
             //get rand num between 0 and 4 (0, 1, 2, 3) and add to pattern list
-            Form1.pattern.Add(rand.Next(0, 4)); 
+            Form1.pattern.Add(rand.Next(0, 4));
 
             //create a for loop that shows each value in the pattern by lighting up approriate button for (int i = 0; i < Form1.pattern.Count; i++)
             for (int i = 0; i < Form1.pattern.Count; i++)
@@ -221,7 +221,7 @@ namespace SimonSays
         {
             //counter goes down
             counter--;
-            
+
             //once counter hits zero and no button is pressed, game over
             if (counter <= 0)
             {
